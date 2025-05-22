@@ -59,37 +59,37 @@ def remove_btn_click():
 
 window = Tk()
 window.title("car Info")
-window.geometry("610x270")
+window.geometry("610x300")
 
 # --- Car ID ---
 Label(window, text="Car ID").place(x=20, y=20)
 car_id = IntVar(value=1)
-Entry(window, textvariable=car_id, state="readonly").place(x=80, y=20)
+Entry(window, textvariable=car_id, state="readonly").place(x=115, y=20)
 
 # --- Name ---
 Label(window, text="Name").place(x=20, y=60)
 name = StringVar()
-Entry(window, textvariable=name).place(x=80, y=60)
+Entry(window, textvariable=name).place(x=115, y=60)
 
 # --- Model ---
 Label(window, text="Model").place(x=20, y=100)
 model = StringVar()
-Entry(window, textvariable=model).place(x=80, y=100)
+Entry(window, textvariable=model).place(x=115, y=100)
 
 # --- Color ---
 Label(window, text="Color").place(x=20, y=140)
 color = StringVar()
-Entry(window, textvariable=color).place(x=80, y=140)
+Entry(window, textvariable=color).place(x=115, y=140)
 
 # --- Production Date ---
 Label(window, text="Production_Date").place(x=20, y=180)
 production_date = StringVar()
-Entry(window, textvariable=production_date).place(x=80, y=180)
+Entry(window, textvariable=production_date).place(x=115, y=180)
 
 # --- Owner ---
 Label(window, text="Owner").place(x=20, y=220)
 owner = StringVar()
-Entry(window, textvariable=owner).place(x=80, y=220)
+Entry(window, textvariable=owner).place(x=115, y=220)
 
 # --- Table ---
 table = ttk.Treeview(window, columns=[1, 2, 3, 4, 5, 6], show="headings")
@@ -110,7 +110,7 @@ table.column(6, width=100)
 
 table.bind("<<TreeviewSelect>>", table_select)
 
-table.place(x=230, y=20)
+table.place(x=260, y=20)
 
 # --- Buttons ---
 Button(window, text="Save", width=6, command=save_btn_click).place(x=50, y=290)
