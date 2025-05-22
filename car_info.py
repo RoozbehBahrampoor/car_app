@@ -113,10 +113,10 @@ table.bind("<<TreeviewSelect>>", table_select)
 table.place(x=230, y=20)
 
 # --- Buttons ---
-Button(window, text="Save", width=6, command=save_btn_click).place(x=20, y=220)
-Button(window, text="Edit", width=6, command=edit_btn_click).place(x=90, y=220)
-Button(window, text="Remove", width=6, command=remove_btn_click).place(x=160, y=220)
-Button(window, text="Clear", width=6, command=reset_form).place(x=20, y=180, width=190)
+Button(window, text="Save", width=6, command=save_btn_click).place(x=50, y=290)
+Button(window, text="Edit", width=6, command=edit_btn_click).place(x=110, y=290)
+Button(window, text="Remove", width=6, command=remove_btn_click).place(x=170, y=290)
+Button(window, text="Clear", width=6, command=reset_form).place(x=80, y=250, width=110)
 
 # ---Load initial data ---
 reset_form()
