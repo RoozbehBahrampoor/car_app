@@ -1,3 +1,5 @@
+from validator import car_validator
+
 class Car:
     def __init__(self, name, model, color, production_date, owner):
         self.name = name
@@ -13,14 +15,8 @@ class Car:
         def find_by_model(self):
             print(f"{self.model} Found ")
 
+    def to_tuple(self):
+        return (self.name, self.model, self.color, self.production_date, self.owner)
 
-#شی سازی
-car1 = Car("benz" , "gclass" , "red" , "2023" , "ali")
-car2 = Car("benz" , "cls" , "blue" , "2022" , "reza")
-
-
-car1.save()
-car2.save()
-
-
-
+    def validator(self):
+        return car_validator(self)

@@ -3,7 +3,7 @@ import tkinter.ttk as ttk
 import tkinter.messagebox as msg
 from file_manager import *
 from validator import *
-
+from car import Car
 car_list = read_from_file("car.dat")
 
 
@@ -39,14 +39,14 @@ def save_btn_click():
 
 
 def table_select(x):
-    selected_car = table.item(table.focus())["values"]
+    selected_car = Car(*table.item(table.focus())["values"])
     if selected_car:
-        car_id.set(selected_car[0])
-        name.set(selected_car[1])
-        model.set(selected_car[2])
-        color.set(selected_car[3])
-        production_date.set(selected_car[4])
-        owner.set(selected_car[5])
+        car_id.set(selected_car.name)
+        name.set(selected_car.model)
+        model.set(selected_car.color)
+        color.set(selected_car.production_date)
+        production_date.set(selected_car.owner)
+
 
 
 def edit_btn_click():
@@ -54,7 +54,9 @@ def edit_btn_click():
 
 
 def remove_btn_click():
-    pass
+    selected_car = (table.focus())[ "values"]
+    if selected_car:
+        table.delete(selected_car)
 
 
 window = Tk()
